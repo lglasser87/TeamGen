@@ -1,0 +1,29 @@
+{
+  "name": "team-gen",
+  "version": "1.0.0",
+  "description": "OOP and testing for week 10 homework",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --verbose test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:lglasser87/TeamGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "git@github.com:lglasser87/TeamGen/issues"
+  },
+  "homepage": "git@github.com:lglasser87/TeamGen#readme",
+  "dependencies": {
+    "inquirer": "^7.0.6"
+  },
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}
