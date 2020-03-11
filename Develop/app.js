@@ -18,19 +18,19 @@ const newEmployee = () => {
     inquirer.prompt([{
         type: 'input',
         name: 'name',
-        message : 'What is your employee\'s name?',
+        message : 'What is your employee name?',
     }, {
         type: 'number',
         name: 'id',
-        message : 'What is your employee\'s ID number?',
+        message : 'What is your employee ID number?',
     }, {
         type: 'input',
         name: 'email',
-        message: 'What is your employee\'s email?',
+        message: 'What is your employee email?',
     }, {
         type: 'list',
         name: 'role',
-        message : 'What is your employee\'s role?',
+        message : 'What is your employee role?',
         choices: ['Manager', 'Engineer', 'Intern']
     }]).then(res => {
         const basicInfo = [];
@@ -54,7 +54,7 @@ const newEngineer = (data) => {
         const engineer = new Engineer(data[0], data[1], data[2], data[3])
         addedEmployees.push(engineer);
         console.log(addedEmployees)
-        nextEmployee();
+        otherEmployee();
     }).catch(err => {
         if (err) console.log(err);
     })
@@ -71,7 +71,7 @@ const newIntern = (data) => {
         const intern = new Intern(data[0], data[1], data[2], data[3])
         addedEmployees.push(intern);
         console.log(addedEmployees)
-        nextEmployee();
+        otherEmployee();
     }).catch(err => {
         if (err) console.log(err);
     })
@@ -88,13 +88,13 @@ const newManager = (data) => {
         const manager = new Manager(data[0], data[1], data[2], data[3])
         addedEmployees.push(manager);
         console.log(addedEmployees)
-        nextEmployee();
+        otherEmployee();
     }).catch(err => {
         if (err) console.log(err);
     })
 }
 
-const nextEmployee = () => {
+const otherEmployee = () => {
     inquirer.prompt({
         type: 'confirm',
         name: 'continue',
